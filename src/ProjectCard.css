@@ -1,0 +1,91 @@
+.project-card {
+	grid-column: span 4;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
+	background-color: transparent;
+
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.14), 0 2px 2px rgba(255, 255, 255, 0.02), 0 4px 4px rgba(255, 255, 255, 0.04),
+		0 10px 8px rgba(255, 255, 255, 0.06), 0 15px 15px rgba(255, 255, 255, 0.06), 0 30px 30px rgba(255, 255, 255, 0.08),
+		0 70px 65px rgba(255, 255, 255, 0.1);
+}
+
+.project-card .card-img {
+	aspect-ratio: 1/1;
+	object-fit: cover;
+	width: 100%;
+	transition: opacity 0.15s ease-in;
+}
+
+.project-card:hover .card-img,
+.project-card:focus-within .card-img {
+	opacity: 0.4;
+}
+
+.project-card:hover,
+.project-card:focus-within {
+	transform: translateY(-5px) scale(1.005) translateZ(0);
+	box-shadow: 0 24px 36px rgba(212, 212, 212, 0.1), 0 24px 46px rgba(255, 255, 255, 0.2);
+}
+
+.project-card .card-content {
+	display: none;
+}
+
+.project-card:hover .card-content,
+.project-card:focus-within .card-content{
+	display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    height: 100%;
+
+    padding: 1rem;
+}
+
+.project-card .card-title {
+	color: white;
+	padding-top: 1rem;
+}
+
+.project-card .card-text {
+	text-align: center;
+	color: white;
+	padding: 0.5rem 0;
+}
+
+.project-card .card-btn {
+	background-color: transparent;
+
+	color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1rem;
+
+    border: 0;
+	padding: 0.5rem 1rem;
+	
+}
+
+.project-card .card-btn:hover {
+	transform: scale(1.05);
+}
+
+@media screen and (max-width: 60rem){
+    .project-card {
+        grid-column: span 6;
+    }
+}
+
+@media screen and (max-width: 40rem){
+    .project-card {
+        grid-column: span 12;
+    }
+}
+
+
